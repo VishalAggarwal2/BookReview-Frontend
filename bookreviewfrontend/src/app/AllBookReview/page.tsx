@@ -20,7 +20,7 @@ if(isLoading){
   return (
     <div className='flex flex-row justify-evenly flex-wrap'>
  {data.map((e: any) => (
-  <BookReviewCard key={e.reviewId} user={e.user} reviewId={e.reviewId} userId={user.id} likeCount={e.likeCount}  bookDsc={e.bookDsc} bookImageUrl={e.bookImageUrl} bookName={e.bookName} bookType={e.bookType} isValidated={e.isValidated} presentAtLibrary={e.presentAtLibrary} referenceNumber={e.referenceNumber} /> // Add unique key
+  <BookReviewCard key={e.reviewId} user={e.user} reviewId={e.reviewId} userId={user.id} likeCount={e.likeCount}  bookDsc={e.bookDsc} bookImageUrl={e.bookImageUrl} bookName={e.bookName} bookType={e.bookType} isValidated={e.isValidated} presentAtLibrary={e.presentAtLibrary} referenceNumber={e.referenceNumber} bookReview={e.bookReview} /> // Add unique key
 ))}
         </div>
   )

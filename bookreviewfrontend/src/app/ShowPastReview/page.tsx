@@ -21,7 +21,7 @@ const  Page = () => {
 </h1>
 </>:<>
 {data.map((e: any) => (
-  <BookReviewCard user={e.user} key={e.reviewId}  reviewId={e.reviewId} bookDsc={e.bookDsc} bookImageUrl={e.bookImageUrl} bookName={e.bookName} bookType={e.bookType} isValidated={e.isValidated} userId={user.id} presentAtLibrary={e.presentAtLibrary} likeCount={e.likeCount} referenceNumber={e.referenceNumber} /> // Add unique key
+  <BookReviewCard user={e.user} key={e.reviewId}  reviewId={e.reviewId} bookDsc={e.bookDsc} bookImageUrl={e.bookImageUrl} bookName={e.bookName} bookType={e.bookType} isValidated={e.isValidated} userId={user.id} presentAtLibrary={e.presentAtLibrary} bookReview={e.bookReview} likeCount={e.likeCount} referenceNumber={e.referenceNumber} /> // Add unique key
 ))}
 </>
 }

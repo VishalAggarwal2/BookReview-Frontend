@@ -2,14 +2,15 @@
 import React, { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import './BookReviewForm.css'; // Import CSS for styling (create this file)
-import { useAddBookReviewMutation  } from '@/Hooks/Mutations/BookReviewMutation';
+import { useAddBookReviewMutation } from '@/Hooks/Mutations/BookReviewMutation';
 import { useUser } from '@clerk/nextjs';
+
 const Page = () => {
-   const { isLoaded, isSignedIn, user } = useUser();
+  const { isLoaded, isSignedIn, user } = useUser();
   if (!isLoaded || !isSignedIn) {
     return <div>Not signed in.</div>;
   }
-  
+
   const [formData, setFormData] = useState({
     bookName: '',
     bookDsc: '',
@@ -17,25 +18,35 @@ const Page = () => {
     bookType: 'novel', // Default value
     presentAtLibrary: false,
     bookReferenceNumber: '',
-    bookReview: '' ,// New field for book review,
-    userId:user?.id
+    bookReview: '', // New field for book review
+    userId: user?.id
   });
 
-  const handleChange = (e:any) => {
+  const handleChange = (e: any) => {
     const { name, value, type, checked } = e.target;
     setFormData(prevState => ({
       ...prevState,
       [name]: type === 'checkbox' ? checked : value
     }));
   };
-  const mutate =  useAddBookReviewMutation(); 
 
-  const handleSubmit = async(e:any) => {
+  const countWords = (str: string) => {
+    return str.trim().split(/\s+/).length;
+  };
+
+  const mutate = useAddBookReviewMutation();
+
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    // console.log(formData);
+
+    const wordCount = countWords(formData.bookReview);
+    if (wordCount > 50) {
+      alert("Book review cannot exceed 50 words.");
+      return;
+    }
+
     mutate.mutate(formData);
-    alert("added succ.....");
-    // Log form data on submit (replace with your desired logic)
+    alert("Added successfully.");
   };
 
   return (
@@ -119,7 +130,7 @@ const Page = () => {
       )}
 
       <div className="form-group">
-        <label htmlFor="bookReview">Book Review:</label>
+        <label htmlFor="bookReview">Book Review (50 Words Max Limit):</label>
         <textarea
           id="bookReview"
           name="bookReview"

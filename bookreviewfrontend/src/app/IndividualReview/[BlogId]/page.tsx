@@ -35,12 +35,13 @@ return <div>Not Authenticated</div>
 
 
   return (
-    <div className='flex flex-row justify-evenly'>
-        <div>
+    <div className='flex flex-col m-auto justify-evenly'>
+
         <BookReviewCard key={query2.data.reviewId} user={query2.data.user} reviewId={query2.data.reviewId} userId={user.id} likeCount={query2.data.likeCount}  bookDsc={query2.data.bookDsc} bookImageUrl={query2.data.bookImageUrl} bookName={query2.data.bookName} bookType={query2.data.bookType} isValidated={query2.data.isValidated} presentAtLibrary={query2.data.presentAtLibrary} referenceNumber={query2.data.referenceNumber} bookReview={query2.data.bookReview} />         <CommentForm userId={user.id} bookReviewId={reviewIdNumber}></CommentForm>
-        </div>
-<div className='flex flex-col gap-3 w-1/4' style={{overflow:"scroll",maxHeight:"90vh",marginTop:"auto"}}  >
-    <h1 className=' text-4xl'>Comments is {reviewIdNumber}</h1>
+<div className=' w-1/2 m-auto sm-md:w-2/3' >
+
+
+    <h1 className=' text-4xl'>Comments </h1>
    {
     query.isLoading?<div>Loading....</div>:<div>
       {
@@ -50,6 +51,7 @@ return <div>Not Authenticated</div>
       }
     </div>
    }
+
 </div>
     </div>
   )

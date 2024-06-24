@@ -38,6 +38,14 @@ const BookReviewCard = ({bookDsc,user,bookImageUrl,bookName,bookType,presentAtLi
       <div className="card-body">
         <img src={bookImageUrl} alt={bookName} className="book-image" />
         <p className="book-description">{bookDsc}</p>
+        <div>
+<b>
+  Book Review :-
+</b>
+    {
+      bookReview
+    }
+  </div>
         {/* <p className="book-review">{bookReview}</p> */}
  {presentAtLibrary && (
           <p className="library-info">
@@ -58,11 +66,7 @@ const BookReviewCard = ({bookDsc,user,bookImageUrl,bookName,bookType,presentAtLi
     </button>
 
   </div>
-  <div>
-    {
-      bookReview
-    }
-  </div>
+
 <Link href="/IndividualReview/1">
 <FaRegCommentAlt/>
 </Link>

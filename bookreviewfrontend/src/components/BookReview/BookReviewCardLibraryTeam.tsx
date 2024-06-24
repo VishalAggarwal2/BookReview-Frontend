@@ -15,7 +15,7 @@ interface Bookreview{
     bookReferenceNumber:String
 }
 // { review }:{review:Bookreview}
-const BookReviewCardLibraryTeam = ({bookDsc,user,bookImageUrl,bookName,bookType,presentAtLibrary,referenceNumber,isValidated,likeCount,reviewId,userId}:any) => {
+const BookReviewCardLibraryTeam = ({bookDsc,user,bookImageUrl,bookName,bookType,presentAtLibrary,referenceNumber,isValidated,likeCount,reviewId,userId,bookReview}:any) => {
   return (
     <div className="book-review-card">
     <div className="card-header flex flex-row align-middle justify-evenly" style={{background:isValidated?"green":"red"}} >
@@ -33,6 +33,10 @@ const BookReviewCardLibraryTeam = ({bookDsc,user,bookImageUrl,bookName,bookType,
       <img src={bookImageUrl} alt={bookName} className="book-image" />
       <p className="book-description">{bookDsc}</p>
       {/* <p className="book-review">{bookReview}</p> */}
+      <p>
+      <b>Book Review:-</b>
+      {bookReview}
+      </p>
 {presentAtLibrary && (
         <p className="library-info">
           <strong>Present at Library:</strong> Yes<br />
@@ -49,10 +53,6 @@ InvalidToValidReview(reviewId,userId)
     Validate
   </button>
 </div>
-
-<Link href="/IndividualReview/1">
-<FaRegCommentAlt/>
-</Link>
 </div>
     </div>
   

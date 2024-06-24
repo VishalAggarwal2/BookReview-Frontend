@@ -16,6 +16,7 @@ query AllBookReviewByUserId($userId: String) {
     isValidated
     referenceNumber
     reviewId
+    bookReview
     likeCount
     user {
       firstName
@@ -40,6 +41,7 @@ export const invalidBookReviewQuery=`query AllInValidBookReview {
     presentAtLibrary
     referenceNumber
     reviewId
+    bookReview
     user {
       email
       firstName
@@ -71,6 +73,7 @@ export const allBookReviewQuery=`query AllBookReview {
     referenceNumber
     likeCount
     reviewId
+    bookReview
     user {
       firstName
       email

@@ -35,7 +35,7 @@ function Page() {
     <div className='flex flex-row flex-wrap gap-4'>
 {
 query2.data.map((e:any)=>{
-  return   <BookReviewCardLibraryTeam key={e.reviewId} user={e.user} reviewId={e.reviewId} userId={user.id} likeCount={e.likeCount}  bookDsc={e.bookDsc} bookImageUrl={e.bookImageUrl} bookName={e.bookName} bookType={e.bookType} isValidated={e.isValidated} presentAtLibrary={e.presentAtLibrary} referenceNumber={e.referenceNumber} /> // Add unique key
+  return   <BookReviewCardLibraryTeam key={e.reviewId} user={e.user} reviewId={e.reviewId} userId={user.id} likeCount={e.likeCount}  bookDsc={e.bookDsc} bookImageUrl={e.bookImageUrl}  bookReview={e.bookReview} bookName={e.bookName} bookType={e.bookType} isValidated={e.isValidated} presentAtLibrary={e.presentAtLibrary} referenceNumber={e.referenceNumber} /> // Add unique key
 })
 }
     </div>

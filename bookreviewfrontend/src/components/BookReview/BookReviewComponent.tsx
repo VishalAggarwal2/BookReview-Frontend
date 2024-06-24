@@ -54,7 +54,7 @@ const BookReviewCard = ({bookDsc,user,bookImageUrl,bookName,bookType,presentAtLi
           </p>
         )} 
 <div className="flex flex-row justify-evenly text-2xl mt-3">
-  <div>
+  {/* <div>
 
     <button>
  
@@ -65,9 +65,9 @@ const BookReviewCard = ({bookDsc,user,bookImageUrl,bookName,bookType,presentAtLi
   <AiOutlineDislike onClick={()=>mutation2.mutate({userId:userId,reviewId:reviewId})} /> 
     </button>
 
-  </div>
+  </div> */}
 
-<Link href="/IndividualReview/1">
+<Link href={`/IndividualReview/${reviewId}`}>
 <FaRegCommentAlt/>
 </Link>
 </div>

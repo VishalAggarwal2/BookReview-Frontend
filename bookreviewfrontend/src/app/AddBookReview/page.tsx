@@ -30,6 +30,13 @@ const Page = () => {
     }));
   };
 
+  const handleRadioChange = (e: any) => {
+    setFormData(prevState => ({
+      ...prevState,
+      presentAtLibrary: e.target.value === 'yes'
+    }));
+  };
+
   const countWords = (str: string) => {
     return str.trim().split(/\s+/).length;
   };
@@ -97,21 +104,37 @@ const Page = () => {
           onChange={handleChange}
           required
         >
-          <option value="novel">Novel</option>
-          <option value="acads">Academics</option>
-          <option value="story">Story</option>
+          <option value="CSE">CSE</option>
+          <option value="MME">MME</option>
+          <option value="Maths">Maths</option>
+          <option value="CCE">CCE</option>
+          <option value="ECE">ECE</option>
+          <option value="Physics">Physics</option>
+          <option value="Novel">Novel</option>
         </select>
       </div>
 
       <div className="form-group">
+        <label>Present at Library:</label>
         <label>
           <input
-            type="checkbox"
+            type="radio"
             name="presentAtLibrary"
-            checked={formData.presentAtLibrary}
-            onChange={handleChange}
+            value="yes"
+            checked={formData.presentAtLibrary === true}
+            onChange={handleRadioChange}
           />
-          Present at Library
+          Yes
+        </label>
+        <label>
+          <input
+            type="radio"
+            name="presentAtLibrary"
+            value="no"
+            checked={formData.presentAtLibrary === false}
+            onChange={handleRadioChange}
+          />
+          No
         </label>
       </div>
 

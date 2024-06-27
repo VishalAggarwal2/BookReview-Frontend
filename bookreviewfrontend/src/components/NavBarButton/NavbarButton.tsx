@@ -24,10 +24,10 @@ import {
           </SignedOut>
           <SignedIn>
             <div style={{display:"flex",flexDirection:"column",alignItems:"center",gap:"3rem"}}>
-<Link href={"/about"}>About</Link>
-<Link href={"/AddBookReview"}>AddBookReview</Link>
-<Link href={"/ShowPastReview"}>ShowPastReview</Link>
-<Link href={"/AllBookReview"}>AllBookReview</Link>
+<Link className="bg-red-950 text-white p-2" style={{borderRadius:"10px"}} href={"/about"}>About</Link>
+<Link className="bg-red-950 text-white p-2" style={{borderRadius:"10px"}} href={"/AddBookReview"}>AddBookReview</Link>
+<Link className="bg-red-950 text-white p-2" style={{borderRadius:"10px"}} href={"/ShowPastReview"}>ShowPastReview</Link>
+<Link className="bg-red-950 text-white p-2" style={{borderRadius:"10px"}} href={"/AllBookReview"}>AllBookReview</Link>
 
               
             <UserButton />

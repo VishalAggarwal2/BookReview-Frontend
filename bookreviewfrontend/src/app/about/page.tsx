@@ -44,6 +44,10 @@ updateUser(userParameters);
 
 
   return (
+    <div>
+<img style={{width:"100vw" , height:"100vh"}} className=' absolute -z-10'  src="https://images.shiksha.com/mediadata/images/1616416318phpToGO75.jpeg" alt="" />
+    <div className=" pt-5">
+
     <div className={styles.container}>
       <h1 className="text-4xl">
         {user.firstName} {user.lastName}
@@ -56,13 +60,20 @@ updateUser(userParameters);
           <p className={styles.email}><strong>Email:</strong> {user.emailAddresses[0]?.emailAddress}</p>
           <div>
           {
- query.data?<div>
-  <Link href="/LibraryTeam/AllReview">
-       <button className=" bg-blue-800 text-white border-solid border-r-8 p-2" style={{borderRadius:"10px"}}>Validate The Review</button>
-  </Link>
+ query.data?<div className="flex flex-col gap-2">
+       <button className=" bg-blue-800 text-white border-solid border-r-8 p-2" style={{borderRadius:"10px"}}>
+       <Link href="/LibraryTeam/AllReview">
+       Validate The Review
+       </Link>
+       </button>
+
+       <button className=" bg-blue-800 text-white border-solid border-r-8 p-2" style={{borderRadius:"10px"}}>
   <Link href="/LibraryTeam/BookNotInLibrary">
-       <button className=" bg-blue-800 text-white border-solid border-r-8 p-2" style={{borderRadius:"10px"}}>BookNotInLibrary</button>
-  </Link>
+        
+        BookNotInLibrary
+        
+</Link></button>
+
  </div>:<></>
  
  }
@@ -70,6 +81,9 @@ updateUser(userParameters);
         </div>
       
       </div>
+    </div>
+    
+    </div>
     </div>
   );
 }

@@ -1,18 +1,20 @@
 /* BookReviewCard.css */
-
 .book-review-card {
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    margin: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-  
-    &:hover {
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
-  }
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px); /* Blur effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.book-review-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
   
   .card-header {
     background-color: #4CAF50;

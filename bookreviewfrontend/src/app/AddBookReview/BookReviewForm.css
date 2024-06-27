@@ -1,16 +1,17 @@
 /* BookReviewForm.css */
 
 .book-review-form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f0f0f0;
-    margin-top: 3rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   border: solid black;
-  }
-  
+}
+
   .form-group {
     
     margin-bottom: 15px;

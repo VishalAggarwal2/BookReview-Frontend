@@ -11,7 +11,8 @@ import NavbarButton from '../NavBarButton/NavbarButton';
 
 const NavBar = () => {
   return (
-    <div className='flex flex-row justify-between bg-black text-white p-7 align-middle'>
+    <div 
+className='flex flex-row justify-between bg-red-950  text-white p-7 align-middle'>
       <h1 className='text-2xl'>
         <Link href={"/"}>
           BookReview
@@ -23,10 +24,11 @@ const NavBar = () => {
         </SignedOut>
         <SignedIn>
           <div className='flex flex-row items-center gap-3 sm-md:hidden'>
-            <Link href={"/about"}>About</Link>
-            <Link href={"/AddBookReview"}>AddBookReview</Link>
-            <Link href={"/ShowPastReview"}>ShowPastReview</Link>
-            <Link href={"/AllBookReview"}>AllBookReview</Link>
+            <Link className=' bg-white text-red-950 border-10 p-1' style={{borderRadius:"10px"}} href={"/about"}>About</Link>
+            <Link className=' bg-white text-red-950 border-10 p-1' style={{borderRadius:"10px"}} href={"/AddBookReview"}>AddBookReview</Link>
+            <Link className=' bg-white text-red-950 border-10 p-1' style={{borderRadius:"10px"}} href={"/ShowPastReview"}>ShowPastReview</Link>
+            <Link className=' bg-white text-red-950 border-10 p-1' style={{borderRadius:"10px"}} href={"/AllBookReview"}>AllBookReview</Link>
+            <Link className=' bg-white text-red-950 border-10 p-1' style={{borderRadius:"10px"}} href={"/devlopers"}>Developer</Link>
             <UserButton />
           </div>
           <div className='block lg:hidden'>

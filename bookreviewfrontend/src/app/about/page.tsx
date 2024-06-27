@@ -60,6 +60,9 @@ updateUser(userParameters);
   <Link href="/LibraryTeam/AllReview">
        <button className=" bg-blue-800 text-white border-solid border-r-8 p-2" style={{borderRadius:"10px"}}>Validate The Review</button>
   </Link>
+  <Link href="/LibraryTeam/BookNotInLibrary">
+       <button className=" bg-blue-800 text-white border-solid border-r-8 p-2" style={{borderRadius:"10px"}}>BookNotInLibrary</button>
+  </Link>
  </div>:<></>
  
  }

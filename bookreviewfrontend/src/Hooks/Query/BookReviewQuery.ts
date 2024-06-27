@@ -1,6 +1,6 @@
 // import { getUserBlogReview } from "@/GraphQl/BookReview/bookReviewquery";
 // import { useQuery } from "@tanstack/react-query"
-import { InvalidToValidQuery, allBookReviewQuery, bookReviewById, invalidBookReviewQuery } from "@/GraphQl/BookReview/bookReviewquery";
+import { InvalidToValidQuery, allBookReviewQuery, bookNotInLibraryquery, bookReviewById, invalidBookReviewQuery } from "@/GraphQl/BookReview/bookReviewquery";
 import { queryClientall } from "@/app/queryClient";
 import axios from "axios"
 export const allInvalidBookReview=async()=>{
@@ -31,7 +31,8 @@ alert("validated succ....");
 
 }
 export const allBookReview=async()=>{
-  console.log("********************");
+  try{
+    console.log("********************");
     const response = await axios.post("https://bookreview-backend-2-t5ub.onrender.com/graphql", {
         query: `${allBookReviewQuery}`,
       });
@@ -39,6 +40,13 @@ export const allBookReview=async()=>{
   console.log("********************");
 
     return response.data.data.allBookReview||[];
+  }catch(e){
+console.log("error in all book review");
+console.log(e);
+return [];
+
+  }
+  
 }
 
 export const getParticularbookByreviewId=async(reviewId:any)=>{
@@ -53,4 +61,17 @@ export const getParticularbookByreviewId=async(reviewId:any)=>{
 console.log("++++++++++++++++++++++++++++")
 
   return response.data.data.getParticularBookReviewId||[];
+}
+
+
+
+// all books that is not in library
+export const notInLibrary=async()=>{
+  console.log("-----------------------------------");
+  const response = await axios.post("https://bookreview-backend-2-t5ub.onrender.com/graphql", {
+      query: `${bookNotInLibraryquery}`,
+    });
+  console.log(response);
+console.log("++++++++++++++++++++++++++++")
+  return response.data.data.NotInLibrary||[];
 }

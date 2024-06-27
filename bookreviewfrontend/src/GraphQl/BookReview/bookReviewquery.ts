@@ -28,6 +28,7 @@ query AllBookReviewByUserId($userId: String) {
 `
 
 
+
 export const invalidBookReviewQuery=`query AllInValidBookReview {
   allInValidBookReview {
     bookDsc
@@ -106,3 +107,31 @@ export const bookReviewById=`query GetParticularBookReviewId($reviewId: Int) {
     bookReview
   }
 }`
+
+
+
+
+export const bookNotInLibraryquery=`
+query NotInLibrary {
+  NotInLibrary {
+    userId
+    user {
+      imageUrl
+      firstName
+      email
+    }
+    reviewId
+    referenceNumber
+    presentAtLibrary
+    likeCount
+    isValidated
+    isRejected
+    bookType
+    bookReviewByLcMember
+    bookName
+    bookImageUrl
+    bookDsc
+    bookReview
+  }
+}
+`

@@ -25,7 +25,7 @@ export const developers = [
       image: "./assets/lucky.png",
     },
     {
-      name: "Charlie Davis",
+      name: "Manas Sachdeva",
       github: "https://github.com/charliedavis",
       linkedin: "https://www.linkedin.com/in/charliedavis/",
       image: "https://avatars.githubusercontent.com/u/5?v=4",

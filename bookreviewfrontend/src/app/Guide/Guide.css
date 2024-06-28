@@ -1,0 +1,52 @@
+.guide-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .guide-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+  }
+  
+  .guide-section {
+    margin-bottom: 20px;
+  }
+  
+  .guide-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: black;
+
+  }
+  
+  .guide-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .guide-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .guide-list strong {
+    color: #FF5722;
+  }
+  
+  .guide-list ul {
+    margin-left: 20px;
+  }
+  
+  .guide-list ul li {
+    margin-bottom: 5px;
+  }

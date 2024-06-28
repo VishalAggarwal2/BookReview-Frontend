@@ -29,6 +29,7 @@ import {
 <Link className="bg-red-950 text-white p-2" style={{borderRadius:"10px"}} href={"/ShowPastReview"}>ShowPastReview</Link>
 <Link className="bg-red-950 text-white p-2" style={{borderRadius:"10px"}} href={"/AllBookReview"}>AllBookReview</Link>
 <Link className="bg-red-950 text-white p-2" style={{borderRadius:"10px"}} href={"/developers"}>Developer</Link>
+<Link className="bg-red-950 text-white p-2" style={{borderRadius:"10px"}} href={"/Guide"}>Guide</Link>
               
             <UserButton />
             </div>

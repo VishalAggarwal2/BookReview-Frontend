@@ -28,6 +28,8 @@ const NavBar = () => {
             <Link className=' bg-white text-red-950 p-1' style={{borderRadius: "10px"}} href={"/ShowPastReview"}>ShowPastReview</Link>
             <Link className=' bg-white text-red-950 p-1' style={{borderRadius: "10px"}} href={"/AllBookReview"}>AllBookReview</Link>
             <Link className=' bg-white text-red-950 p-1' style={{borderRadius: "10px"}} href={"/developers"}>Developer</Link>
+            <Link className=' bg-white text-red-950 p-1' style={{borderRadius: "10px"}} href={"/Guide"}>Guide</Link>
+
             <UserButton />
           </div>
           <div className='block lg:hidden'>
